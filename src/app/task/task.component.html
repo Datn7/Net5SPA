@@ -1,0 +1,16 @@
+<p>task works!</p>
+<ul>
+  <li *ngFor="let task of tasks">
+    {{ task.content }}
+    <button class="btn btn-danger" (click)="deleteTaskM(task.id)">
+      Delete
+    </button>
+  </li>
+</ul>
+
+<input
+  type="text"
+  [(ngModel)]="content"
+  [ngModelOptions]="{ standalone: true }"
+/>
+<button class="btn btn-primary" (click)="postTaskM()">Add</button>
